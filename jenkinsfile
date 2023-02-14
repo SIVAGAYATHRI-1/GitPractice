@@ -7,22 +7,23 @@ pipeline{
        bat 'mvn clean'
     }
    }
-   }
-  stages{
-    stage('compile'){
-      steps{
-       echo 'compile'
-       bat 'mvn compile'
+   
+
+   stage('compile'){
+     steps{
+      echo 'compile'
+      bat 'mvn compile'
     }
    }
-   }
-  stages{
+   
+  
     stage('test'){
       steps{
        echo 'test'
        bat 'mvn test'
     }
    }
-   }
+  }
+   
 
 }
