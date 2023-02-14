@@ -1,11 +1,12 @@
 pipeline{
-  agent any{
+  agent any
    stages{
     stage('build'){
       steps{
        echo 'build'
        bat 'mvn clean'
     }
+   }
    }
   stages{
     stage('compile'){
@@ -14,6 +15,7 @@ pipeline{
        bat 'mvn compile'
     }
    }
+   }
   stages{
     stage('test'){
       steps{
@@ -21,6 +23,6 @@ pipeline{
        bat 'mvn test'
     }
    }
-}
-}
+   }
+
 }
