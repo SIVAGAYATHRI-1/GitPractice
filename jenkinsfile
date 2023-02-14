@@ -1,0 +1,26 @@
+pipeline{
+  agent any{
+   stages{
+    stage('build'){
+      steps{
+       echo 'build'
+       bat 'mvn clean'
+    }
+   }
+  stages{
+    stage('compile'){
+      steps{
+       echo 'compile'
+       bat 'mvn compile'
+    }
+   }
+  stages{
+    stage('test'){
+      steps{
+       echo 'test'
+       bat 'mvn test'
+    }
+   }
+}
+}
+}
